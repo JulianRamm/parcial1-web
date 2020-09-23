@@ -13,9 +13,12 @@
   </head>
   <body>
     <div class="container">
-        <div class = "row">
+        <div class = "row m-2">
             <h1 class = "col-md-10" style="font-family: 'Satisfy', cursive;">Restaurant & Lounge</h1>
-            <img src="assets/buy.png" class = "col-md-2">
+            <div class="col-md-2">
+             <img src ="assets/buy1.png" onclick="showSummary()"><span id = "items"> items</span>
+            </div>
+           
         </div>
         <hr>
         <img src="assets/burger.png" class="img-fluid" alt="Responsive image">
@@ -23,17 +26,35 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Burgers <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Tacos</a>
-                <a class="nav-item nav-link" href="#">Salads</a>
-                <a class="nav-item nav-link" href="#">Desserts</a>
-                <a class="nav-item nav-link" href="#">Drinks & sides</a>
+                <a class="nav-item nav-link active" href="#" onclick="showProducts('burgers')">Burgers <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#" onclick="showProducts('tacos')">Tacos</a>
+                <a class="nav-item nav-link" href="#" onclick="showProducts('salads')">Salads</a>
+                <a class="nav-item nav-link" href="#" onclick="showProducts('desserts')">Desserts</a>
+                <a class="nav-item nav-link" href="#" onclick="showProducts('dys')">Drinks & sides</a>
               </div>
             </div>
           </nav>
           <hr>
-          <h2 class = "text-center">Burgers</h2>
+          <h2 class = "text-center" id="food-t"></h2>
           <hr>
+          <div class = "d-flex" id = "food">
+          </div>
+          <div id = "summary" style="display: none;">
+              <table class="table table-striped">
+                <thead >
+                  <tr>
+                    <th scope="row" style="width: 10%">Item</th>
+                    <th scope="row" style="width: 10%">Qty.</th>
+                    <th scope="row" style="width: 40%">Description</th>
+                    <th scope="row" style="width: 20%">Unit Price</th>
+                    <th scope="row" style="width: 20%">Amount</th>
+                  </tr>
+                </thead>
+                <tbody id="items-s">
+                </tbody>
+              </table>
+
+          </div>
     </div>
 
 
@@ -42,5 +63,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
   </body>
 </html>
